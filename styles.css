@@ -1,0 +1,273 @@
+:root {
+  --bg: #f3f6f9;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #5b6472;
+  --primary: #004f9f;
+  --primary-hover: #003f7f;
+  --secondary: #e9eef5;
+  --border: #d8e0ea;
+  --ring: rgba(0, 79, 159, 0.25);
+  --shadow: 0 10px 30px rgba(18, 35, 58, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #eef3f8 0%, var(--bg) 280px, var(--bg) 100%);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.top-bar {
+  background: linear-gradient(120deg, #003a6d 0%, #005eb8 100%);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.top-bar-inner {
+  min-height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.gov-label {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  opacity: 0.92;
+}
+
+.brand-block h1 {
+  margin: 0.25rem 0 0;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 700;
+}
+
+.top-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.top-links a,
+.site-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-links a:hover,
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin: 2rem auto 3.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.search-card,
+.quick-links {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.search-card {
+  padding: 1.5rem;
+}
+
+.search-card-header h2,
+.section-title-row h2 {
+  margin: 0;
+  font-size: 1.375rem;
+}
+
+.search-card-header p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+.search-form {
+  margin-top: 1.25rem;
+}
+
+.search-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.search-input-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+input[type="search"],
+select {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+}
+
+input[type="search"] {
+  flex: 1;
+  min-width: 240px;
+}
+
+input[type="search"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.1rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: var(--text);
+  border: 1px solid #d1dbe8;
+}
+
+.btn-secondary:hover {
+  background: #dfe7f2;
+}
+
+.hint {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.filters {
+  margin-top: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.filters legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
+
+.filter-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.filter-item label {
+  margin-bottom: 0.35rem;
+}
+
+.filter-item select {
+  width: 100%;
+}
+
+.quick-links {
+  padding: 1.5rem;
+}
+
+.quick-links ul {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.quick-links a {
+  display: block;
+  text-decoration: none;
+  color: #083a78;
+  background: #f8fbff;
+  border: 1px solid #d7e7fa;
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  font-weight: 500;
+}
+
+.quick-links a:hover {
+  background: #eef5ff;
+  border-color: #b8d3f2;
+}
+
+.site-footer {
+  background: #0e2744;
+  color: #e4edf9;
+}
+
+.footer-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.footer-inner nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .top-bar-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .search-card,
+  .quick-links {
+    border-radius: 12px;
+    padding: 1.15rem;
+  }
+}
